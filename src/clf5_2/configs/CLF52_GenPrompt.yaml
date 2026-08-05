@@ -1,0 +1,17 @@
+datasets:
+  name: Emilia_ZH_EN  # dataset name
+  batch_size_per_gpu: 120000  # 8 GPUs, 8 * 38400 = 307200
+  batch_size_type: frame  # frame | sample
+  max_samples: 64  # max sequences per batch if use frame-wise batch_size. we set 32 for small models, 64 for base models
+  num_workers: 16
+  tokenizer: pinyin  # tokenizer type
+
+source:
+  expname: CLF52_PretrainBase
+  ckptstep: 1250000
+  frac_lengths_mask: [0.2, 0.4]
+
+infer:
+  nfe_step: 32
+  cfg_strength: 2.0
+  sway_sampling_coef: -1.0

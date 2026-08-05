@@ -1,0 +1,36 @@
+# Cross-Lingual F5-TTS 2 (CLF5-2) inference config.
+#
+# CLF5-2 is transcript-free: it does NOT need the transcript of the audio prompt.
+# `ref_text` is ignored; duration is predicted by the silence-robust speaking
+# rate predictor (SRP), and the missing prompt transcript is replaced inside the
+# model by ratio-based learnable prompt tokens + an EOS marker.
+#
+# Run (after `pip install -e .`):
+#   clf52-infer -c src/clf5_2/infer/examples/clf52/clf52.toml
+#   # or: python -m clf5_2.infer.infer_cli -c src/clf5_2/infer/examples/clf52/clf52.toml
+# (ckpt paths below are relative to the project root)
+
+# The model config and SRP config default to the packaged copies
+# (clf5_2/configs/... and rate_pred/configs/SpeedPredict_Base_GCE_p3.yaml),
+# so they are omitted here. Override with --model_cfg / --srp_model_cfg if needed.
+
+# checkpoints
+ckpt_file = "ckpts/clf52_100000.safetensors"
+srp_ckpt_file = "ckpts/silence-robust-srp.safetensors"
+
+# vocoder (Vocos, loaded from local dir ckpts/vocos-mel-24khz)
+vocoder_name = "vocos"
+load_vocoder_from_local = true
+
+# reference audio prompt (any language; no transcript needed)
+# packaged example; resolved against the clf5_2 package automatically
+ref_audio = "infer/examples/basic/basic_ref_en.wav"
+ref_text = ""  # ignored by CLF5-2
+
+# text to synthesize (can be a different language than the prompt)
+gen_text = "This is a quick test of Cross-Lingual F five T T S two."
+
+gen_file = ""
+remove_silence = false
+output_dir = "tests"
+output_file = "clf52_basic.wav"
