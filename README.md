@@ -89,10 +89,8 @@ Cross-Lingual_F5-TTS_2/
 
 ## Acknowledgements
 
-- [F5-TTS](https://arxiv.org/abs/2410.06885) by SWivid — the brilliant base model and foundation of this codebase.
-- **Cross-Lingual F5-TTS** (Proc. ICASSP 2026) — the predecessor whose syllable-level speaking rate predictor CLF5-2 builds on.
+- [F5-TTS](https://arxiv.org/abs/2410.06885) brilliant work and the foundation of this codebase.
 - [Vocos](https://huggingface.co/charactr/vocos-mel-24khz) as the mel vocoder (BigVGAN is also supported as an alternative vocoder).
-- [torchdiffeq](https://github.com/rtqichen/torchdiffeq) as the ODE solver.
 - [FunASR](https://github.com/modelscope/FunASR) and [faster-whisper](https://github.com/SYSTRAN/faster-whisper) for evaluation tools.
 
 ## Citations
