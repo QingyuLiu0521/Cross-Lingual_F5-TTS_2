@@ -1,5 +1,6 @@
 # Cross-Lingual F5-TTS 2: A Simplified Framework for Language-Agnostic Voice Cloning
 
+<a href="https://arxiv.org/abs/2609.15184" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Paper-2609.15184-b31b1b?labelColor=grey&logo=arxiv&style=for-the-badge" alt="Paper"></a>
 <a href="https://huggingface.co/QingyuLiu1/Cross-Lingual_F5-TTS_2" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Models-yellow?labelColor=grey&logo=huggingface&style=for-the-badge" alt="HF Model"></a>
 <a href="https://qingyuliu0521.github.io/Cross-Lingual_F5-TTS_2_demo/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/-Demo%20Page-orange?labelColor=grey&logo=github&style=for-the-badge" alt="Demo"></a>
 <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
